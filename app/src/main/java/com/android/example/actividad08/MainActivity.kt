@@ -86,6 +86,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                 detalle.setTextColor(Color.BLACK)
                 detalle.text = "\nLEJOS $valorCambio"
             }
+        } else {
+            Toast.makeText(applicationContext, "Sin cambios", Toast.LENGTH_SHORT).show()
         }
     }
 
