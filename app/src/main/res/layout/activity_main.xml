@@ -8,33 +8,42 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="335dp"
+        android:layout_height="731dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/btnListado"
-            android:layout_width="match_parent"
+            android:layout_width="326dp"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="clickListado"
+            android:text="Listado" />
 
         <Button
             android:id="@+id/btnMagnetico"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="clickMagnetico"
+            android:text="Magnetico" />
 
         <Button
             android:id="@+id/btnProximidad"
-            android:layout_width="match_parent"
+            android:layout_width="328dp"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="clickProximidad"
+            android:text="Proximidad" />
 
         <TextView
             android:id="@+id/txtDetalle"
-            android:layout_width="match_parent"
+            android:layout_width="331dp"
             android:layout_height="572dp"
             android:text="TextView" />
     </LinearLayout>
