@@ -41,10 +41,31 @@
             android:onClick="clickProximidad"
             android:text="Proximidad" />
 
+        <Button
+            android:id="@+id/btnGiroscopio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickGiroscopio"
+            android:text="Giroscopio" />
+
+        <Button
+            android:id="@+id/btnAcelerometro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickAcelerometro"
+            android:text="Acelerometro" />
+
+        <Button
+            android:id="@+id/btnPodometro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickPodometro"
+            android:text="Podometro" />
+
         <TextView
             android:id="@+id/txtDetalle"
-            android:layout_width="331dp"
-            android:layout_height="572dp"
+            android:layout_width="match_parent"
+            android:layout_height="428dp"
             android:text="TextView" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

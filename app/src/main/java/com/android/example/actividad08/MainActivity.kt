@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             detalle.setBackgroundColor(Color.GRAY)
             detalle.text = "Propiedades del sensor Magnetico: \nNombre: ${sensor.name}"+
                     "\nVersion: ${sensor.version}\nFabricante: ${sensor.vendor}"
-        } else {
+        }else {
             Toast.makeText(applicationContext, "El dispositivo no cuenta con sensor magnetico",
                 Toast.LENGTH_SHORT).show()
         }
@@ -68,6 +68,36 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         } else {
             detalle.text = "No se cuenta con sensor de proximidad"
             existeSensorProximidad = false
+        }
+    }
+
+    fun clickGiroscopio(view: View?) {
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE) != null){
+            val giroscopioSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
+            detalle.text = "El dispositivo tiene sensor de giroscopio: ${giroscopioSensor!!.name}"
+            detalle.setBackgroundColor(Color.CYAN)
+        } else {
+            detalle.text = "No se cuenta con sensor de giroscopio"
+        }
+    }
+
+    fun clickAcelerometro(view: View?) {
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null){
+            val acelerometroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+            detalle.text = "El dispositivo tiene sensor de acelerómetro: ${acelerometroSensor!!.name}"
+            detalle.setBackgroundColor(Color.YELLOW)
+        } else {
+            detalle.text = "No se cuenta con sensor de acelerómetro"
+        }
+    }
+
+    fun clickPodometro(view: View?) {
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null){
+            val podometroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
+            detalle.text = "El dispositivo tiene sensor de podómetro: ${podometroSensor!!.name}"
+            detalle.setBackgroundColor(Color.MAGENTA)
+        } else {
+            detalle.text = "No se cuenta con sensor de podómetro"
         }
     }
 
